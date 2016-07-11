@@ -3,6 +3,11 @@ MyApp.get "/results/list" do
   erb :"results/gallery"
 end
 
+MyApp.get "/results/rated" do
+  @bechdel_passone = Result.passes_one
+  erb :"results/rated"
+end
+
 MyApp.post "/results/:id/add" do
   session["temporary_error_message"] = nil
 

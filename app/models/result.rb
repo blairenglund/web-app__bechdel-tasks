@@ -26,11 +26,34 @@ class Result < ActiveRecord::Base
 		end
 	end
   
+ # Finds all of the Result objects that have been rated
+ #
+ #Returns list of Result objects
+  def Result.passes_one
+    results = Result.where({"q1" => true})
+    if results.empty?
+      return nil
+    else
+      return results
+    end
+  end
+
  # Checks to see if a Movie object passes the bechdel test
  #
  # Returns Boolean
   def is_bechdel
     if self.q1 == true && self.q2 == true && self.q3 == true
+      return true
+    else
+      return false
+    end
+  end
+
+ # Checks to see if a Movie Object is rated at all
+ #
+ # Returns Boolean
+  def is_rated
+    if self.q1 == (true or false) && self.q2 == true && self.q3 == true
       return true
     else
       return false

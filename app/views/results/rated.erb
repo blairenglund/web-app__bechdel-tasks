@@ -18,12 +18,12 @@
 <div>
   <div class="moviecontent">
     <h1 class="bollywood-title">
-      Bechdel Gallery
+      All rated films
     </h1>
 
     <div class = "movielist">
-      <% if @bechdel_pass != nil %>
-        <% @bechdel_pass.each_with_index do |movie, i| %>
+      <% if @bechdel_passone != nil %>
+        <% @bechdel_passone.each_with_index do |movie, i| %>
           <div>
             <a href="/movies/<%= movie.movie_id %>/view">
               <img  class="movielist__movie" src="<%= movie.movie_info.image %>">
@@ -31,7 +31,7 @@
           </div>
         <% end %>
       <% else %>
-        <p>No Bechdel results yet.</p>
+        <p class="bechdelrating__text">No Bechdel results yet.</p>
       <%end%>
     </div>
   </div>

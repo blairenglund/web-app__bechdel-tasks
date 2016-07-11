@@ -6,7 +6,7 @@
 
 <img src="<%= @movie.image %>" alt="<%=@movie.title%>">
 
-<p>
+<p class=bechdelrating__text>
 	<% if !@movie.result %>	
 		This movie has not yet been rated using the Bechdel test.
 	<% elsif @movie.result.is_bechdel == true %>
@@ -51,25 +51,25 @@
 <% else %>
 
 	<h4 class="bechdelrating__head">Edit Bechdel rating:</h4>
-	<p>Please select the criteria that this movie fulfills:</p>
+	<p class="bechdelrating__text">Please select the criteria that this movie fulfills:</p>
 
 	<form action="/results/<%= @movie.id %>/edit" method="post">
 		<div>
-		  <label>
+		  <label class="bechdelrating__text">
 		    <input type="checkbox" name="q1" value="true" <%= "checked" if @movie.result.q1 %>>
 		    The movie has to have at least two named women in it
 		  </label>
 		</div>
 
 		<div>
-		  <label>
+		  <label class="bechdelrating__text">
 		    <input type="checkbox" name="q2" value="true" <%= "checked" if @movie.result.q2 %>>
 		    Those women talk to each other
 		  </label>
 		</div>
 
 		<div>
-		  <label>
+		  <label class="bechdelrating__text">
 		    <input type="checkbox" name="q3" value="true" <%= "checked" if @movie.result.q3 %>>
 		    About something besides a man
 		  </label>
