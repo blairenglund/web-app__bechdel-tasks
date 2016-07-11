@@ -2,7 +2,6 @@
   font-family: sans-serif;
   padding: 15px 30px 15px 30px;
   background-color: #FFF;
-  width: 95vw;
   margin-top: -8px;
   margin-left: -8px;
 }
@@ -73,6 +72,16 @@
   color: #746ED8;
 }
 
+.bechdelrating__head{
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+
+.bechdelrating__text{
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+
 .movielist{
   display: flex;
   flex-flow: row wrap;
@@ -98,10 +107,12 @@
   align-items: center;
   align-content: center;
   margin: 0 -8px -8px -8px;
-  padding: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-image: url(/assets/old-movie.jpg);
   background-position: center right;
-  background-size: 105vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .search__head{
@@ -139,10 +150,40 @@
   background-color: #FFF;
   padding: 10px 50px 10px 20px;
   margin-right: 10px;
+  -webkit-appearance: none;
 }
 
 .l-center{
   text-align: center;
 }
+
+.errormessage{
+  padding: 20px;
+  background-color: #eac5c5;
+  margin: 0 20px 20px 20px;
+  border-radius: 4px;
+}
+
+.errormessage__text{
+  font-family: sans-serif;
+  color: #ba2626;
+}
+
+.errormessage__button{
+  font-family: sans-serif;
+  color: #ba2626;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+  vertical-align: 2px;
+}
+
+.errormessage__button:hover{
+  background-color: #ead5d5;
+}
+
+
+
+
 
 

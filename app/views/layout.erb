@@ -47,11 +47,11 @@
 </nav>
 
 <% if @error != nil %>
-  <div class="">
+  <div class="errormessage">
     <% @error.each do |error_message| %>
       <div role="alert">
-        <button type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>Error!</strong> <%= error_message %>
+        <button class="errormessage__button" type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <span class="errormessage__text"><strong>Error!</strong> <%= error_message %></span>
       </div>
     <% end %>
   </div>

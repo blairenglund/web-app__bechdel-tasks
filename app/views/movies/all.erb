@@ -1,0 +1,38 @@
+<div>
+  <div class="container  l-bechdel-test-info">
+    <div class="bechdel-test-info">
+      <h3>The Bechdel Test</h3>
+
+      <h4 class="bechdel-test-info__lines" >
+        1. The movie has to have at least two women in it...<br>
+        2. ...who talk to each other<br>
+        3. ...about something besides a man.
+      </h4>
+      <p>
+        <a class="bechdel-test-info__link" href="https://en.wikipedia.org/wiki/Bechdel_test">Find out more about the Bechdel Test.</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="moviecontent">
+    <h1 class="bollywood-title">
+      Bechdel Gallery
+    </h1>
+
+    <div class = "movielist">
+      <% if @bechdel_pass != nil %>
+        <% @bechdel_pass.each_with_index do |movie, i| %>
+          <div>
+            <a href="/movies/<%= movie.movie_id %>/view">
+              <img  class="movielist__movie" src="<%= movie.movie_info.image %>">
+            </a>
+          </div>
+        <% end %>
+      <% else %>
+        <p>No Bechdel results yet.</p>
+      <%end%>
+    </div>
+  </div>
+</div>

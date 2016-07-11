@@ -1,4 +1,5 @@
-<h1>
+<div class="moviecontent">
+<h1 class="bollywood-title">
     <%= @movie.title %><br>
     <small>directed by <%= @movie.director %></small>
 </h1>
@@ -18,27 +19,27 @@
 
 <% if !@movie.result %>
 	
-	<h4>Add Bechdel rating:</h4>
-		<p>Please select the criteria that this movie fulfills:</p>
+	<h4 class="bechdelrating__head">Add Bechdel rating:</h4>
+		<p class="bechdelrating__text">Please select the criteria that this movie fulfills:</p>
 
 	<form action="/results/<%= @movie.id %>/add" method="post">
 
 		<div>
-		  <label>
+		  <label class="bechdelrating__text">
 		    <input type="checkbox" name="q1" value="true">
 		    The movie has to have at least two named women in it
 		  </label>
 		</div>
 
 		<div>
-		  <label>
+		  <label class="bechdelrating__text">
 		    <input type="checkbox" name="q2" value="true">
 		    Those women talk to each other
 		  </label>
 		</div>
 
 		<div>
-		  <label>
+		  <label class="bechdelrating__text">
 		    <input type="checkbox" name="q3" value="true">
 		    About something besides a man
 		  </label>
@@ -49,7 +50,7 @@
 
 <% else %>
 
-	<h4>Edit Bechdel rating:</h4>
+	<h4 class="bechdelrating__head">Edit Bechdel rating:</h4>
 	<p>Please select the criteria that this movie fulfills:</p>
 
 	<form action="/results/<%= @movie.id %>/edit" method="post">
@@ -78,3 +79,4 @@
 	</form>
 
 <% end %>
+</div>
