@@ -1,24 +1,23 @@
 <div>
-  <div class="container">
-
+  <div class="container  l-bechdel-test-info">
     <div class="bechdel-test-info">
       <h3>The Bechdel Test</h3>
 
-      <h4>
+      <h4 class="bechdel-test-info__lines" >
         1. The movie has to have at least two women in it...<br>
         2. ...who talk to each other<br>
         3. ...about something besides a man.
       </h4>
+      <p>
+        <a class="bechdel-test-info__link" href="https://en.wikipedia.org/wiki/Bechdel_test">Find out more about the Bechdel Test.</a>
+      </p>
     </div>
-    <p>
-      <a href="https://en.wikipedia.org/wiki/Bechdel_test">Find out more about the Bechdel Test.</a>
-    </p>
   </div>
 </div>
 
 <div>
-  <div>
-    <h1>
+  <div class="moviecontent">
+    <h1 class="bollywood-title">
       <%= @new_movie.title %><br>
       <small>directed by <%= @new_movie.director %></small>
     </h1>

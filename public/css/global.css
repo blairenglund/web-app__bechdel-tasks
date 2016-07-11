@@ -1,18 +1,92 @@
+.header{
+  font-family: sans-serif;
+  padding: 15px 30px 20px 30px;
+  background-color: #FFF;
+  width: 95vw;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.header__list {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  font-family: sans-serif;
+  padding-left: 0;
+}
+
+.header__link {
+  color: #222;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.header__link:hover {
+  color: #645EC8;
+}
+
+.l-headerright{
+  margin-left: 20px;
+}
+
+.header__listitem--home{
+  font-size: 1.5em;
+  margin-right: 30vw;
+}
+
+.moviecontent{
+  background-color: black;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+
 .bechdel-test-info {
   background-color: rgb(27, 28, 29);
   color: #999;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 38px;
+  font-family: sans-serif;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 .bechdel-test-info__lines{
   line-height: 1.5;
+  font-weight: lighter;
 }
-
+.bechdel-test-info__link{
+  color: #645EC8;
+  text-decoration: none;
+}
+.bechdel-test-info__link:hover{
+  color: #746ED8;
+}
+.movielist{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.movielist__movie{
+  margin-bottom: 20px;
+}
 .movie-result {
   padding-top: 20px;
 }
 .bollywood-title{
   margin-bottom: 30px;
+  color: #FFF;
+  font-family: sans-serif;
+  font-weight: lighter;
 }
 .bollywood-title.bollywood-title--no-margin-top{
   margin-top: 0;
@@ -20,7 +94,6 @@
 .get-another-movie{
   margin-top: 30px;
 }
-
 .search-form-actions{
   clear: both;
   padding-top: 20px;
@@ -42,7 +115,6 @@
 .block-bollywood-lead{
   text-shadow: 17px 0px 10px #000;
 }
-
 .bechdel-status{
   margin-top: 51px;
   color: #999;
